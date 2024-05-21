@@ -1,0 +1,91 @@
+/* variables */
+:root{
+    --color2: #EEF7FF;
+    --colorFondo: #CDE8E5;
+    --color3: #7AB2B2;
+    --tipografia: 'Arial Narrow Bold', 'Arial' sans-serif;
+}
+
+/* condiciones inciales */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color2);
+    font-family: var(--tipografia);
+    font-size: 25px;
+}
+
+/* Header */
+header{
+    width: 100vw;
+    height: 100%;
+}
+
+.titulo{
+    background-color: var(--colorFondo);    width: 100%;
+    height: 150px;
+    display: grid;
+    place-content: center;
+}
+
+/* Main */
+/* Footer */
+footer{
+    background-color: var(--color3);
+    height: 150px;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    color: var(--colorFondo);
+}
+
+.contenedor-slaider{
+    border: solid var(--color3) 5px;
+    width: 1000px;
+    height: 500px;
+    /* manera de centrar con margin */
+    margin: 100px auto;
+    overflow-x: scroll;
+}
+
+/* contenedor directo. especifico como se debe mover */
+.slaider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* nombre que se conecta con el keyframe */
+    animation-name: deslizar;
+    /* tiempo de duracion */
+    animation-duration: 10s;
+    /* definir cuantas veces quiero que se repita */
+    animation-iteration-count: infinite;
+    /* como queremos que se vea el cambio, rapido, lento, brusco,etc */
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+}
+
+    /* aca ponemos a funcionar la animacion */
+
+@keyframes deslizar {
+    from{
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(-150%);
+    }
+    to{
+        transform: translateX(-300%);
+    }
+}
+
+.contenedor-slaider img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
