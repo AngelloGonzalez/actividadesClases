@@ -15,26 +15,38 @@
 }
 
 body{
-    background-color: var(--color2);
+    background-color: var(--colorFondo);
     font-family: var(--tipografia);
     font-size: 25px;
+    overflow-x: hidden;
 }
 
 /* Header */
+
 header{
     width: 100vw;
     height: 100%;
 }
 
 .titulo{
-    background-color: var(--colorFondo);    width: 100%;
+    background-color: var(--color2);    width: 100%;
     height: 150px;
     display: grid;
     place-content: center;
+    color: var(--color3);
+    transition: all 1s ease-in-out;
+}
+
+.titulo:hover{
+    background-color: aquamarine;
+    color: darkolivegreen;
+    transform: scale(1.2);
 }
 
 /* Main */
+
 /* Footer */
+
 footer{
     background-color: var(--color3);
     height: 150px;
@@ -45,9 +57,9 @@ footer{
 }
 
 .contenedor-slaider{
-    border: solid var(--color3) 5px;
-    width: 1000px;
-    height: 500px;
+   border: solid var(--color3) 5px;
+    width: 75%;
+    height: 65vh;
     /* manera de centrar con margin */
     margin: 100px auto;
     overflow-x: scroll;
@@ -88,4 +100,35 @@ footer{
     height: 100%;
     object-fit: cover;
 
+}
+
+main{
+    border: solid var(--color3) 5px;
+    width: 75%;
+    height: 65vh;
+    /* manera de centrar con margin */
+    margin: 10% auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.tituloSecundario{
+    padding: 20px;
+}
+
+.imgParrafo{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    align-items: center;  
+}
+
+.imgParrafo img{
+    width: 50%;
+}
+.imgParrafo p {
+    width: 50%;
 }
